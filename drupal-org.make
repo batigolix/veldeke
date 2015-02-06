@@ -4,31 +4,28 @@ api = "2"
 
 ; +++++ Modules +++++
 
-projects[ctools][version] = "1.0-rc1"
+projects[ctools][version] = "1.6"
 projects[ctools][subdir] = "contrib"
 
-projects[context][version] = "3.3"
+projects[context][version] = "3.6"
 projects[context][subdir] = "contrib"
 
 projects[migrate][version] = "2.5"
 projects[migrate][subdir] = "contrib"
 
-projects[profiler_builder][version] = "1.2"
-projects[profiler_builder][subdir] = "contrib"
-
-projects[features][version] = "2.0-beta1"
+projects[features][version] = "2.3"
 projects[features][subdir] = "contrib"
 
-projects[imce][version] = "1.5"
+projects[imce][version] = "1.9"
 projects[imce][subdir] = "contrib"
 
-projects[backup_migrate][version] = "2.4"
+projects[backup_migrate][version] = "2.8"
 projects[backup_migrate][subdir] = "contrib"
 
 projects[entity][version] = "1.5"
 projects[entity][subdir] = "contrib"
 
-projects[environment_indicator][version] = "2.2"
+projects[environment_indicator][version] = "2.5"
 projects[environment_indicator][subdir] = "contrib"
 
 projects[redirect][version] = "1.0-rc1"
