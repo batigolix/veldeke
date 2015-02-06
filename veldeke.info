@@ -34,7 +34,7 @@ dependencies[] = user
 ; Development
 dependencies[] = migrate
 dependencies[] = migrate_ui
-dependencies[] = profiler_builder
+;dependencies[] = profiler_builder
 ; Media
 dependencies[] = imce
 ; Other
@@ -53,5 +53,5 @@ dependencies[] = wysiwyg_linebreaks
 dependencies[] = webform
 ; Features
 dependencies[] = features
-dependencies[] = veldeke_dictionary
+;dependencies[] = veldeke_dictionary
 
