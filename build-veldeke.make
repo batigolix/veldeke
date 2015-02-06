@@ -1,4 +1,4 @@
-; dialekvereiniging_veldeke_venlo make file for local development
+; veldeke make file for local development
 core = "7.x"
 api = "2"
 

@@ -1,6 +1,6 @@
-; Packaging information for dialekvereiniging_veldeke_venlo
-name = "Dialekvereiniging Veldeke Venlo"
-description = "Gaef um óg modertaal, gaef um Veldeke"
+; Packaging information for veldeke
+name = "Veldeke"
+description = "Veldeke Krink Venlo website"
 exclusive = "1"
 core = "7.x"
 ; ----------
@@ -34,7 +34,7 @@ dependencies[] = user
 ; Development
 dependencies[] = migrate
 dependencies[] = migrate_ui
-;dependencies[] = profiler_builder
+dependencies[] = profiler_builder
 ; Media
 dependencies[] = imce
 ; Other

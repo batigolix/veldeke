@@ -1,4 +1,4 @@
-; dialekvereiniging_veldeke_venlo make file for d.o. usage
+; veldeke make file for d.o. usage
 core = "7.x"
 api = "2"
 
