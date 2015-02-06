@@ -34,7 +34,7 @@ projects[redirect][subdir] = "contrib"
 projects[token][version] = "1.0-rc1"
 projects[token][subdir] = "contrib"
 
-projects[google_analytics][version] = "1.2"
+projects[google_analytics][version] = "1.4"
 projects[google_analytics][subdir] = "contrib"
 
 projects[imce_wysiwyg][version] = "1.x-dev"
@@ -43,10 +43,10 @@ projects[imce_wysiwyg][subdir] = "contrib"
 projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
 
-projects[wysiwyg_linebreaks][version] = "1.4"
+projects[wysiwyg_linebreaks][version] = "1.6"
 projects[wysiwyg_linebreaks][subdir] = "contrib"
 
-projects[webform][version] = "3.18"
+projects[webform][version] = "3.21"
 projects[webform][subdir] = "contrib"
 
 ; +++++ Themes +++++
@@ -56,23 +56,7 @@ projects[wilderness][type] = "theme"
 projects[wilderness][version] = "1.0-alpha1"
 projects[wilderness][subdir] = "contrib"
 
-; chameleon
-projects[chameleon][type] = "theme"
-projects[chameleon][version] = "1.0-beta1"
-projects[chameleon][subdir] = "contrib"
-
-; dingus
-projects[dingus][type] = "theme"
-projects[dingus][version] = "2.0-alpha1"
-projects[dingus][subdir] = "contrib"
-
 ; shiny
 projects[shiny][type] = "theme"
 projects[shiny][version] = "1.6"
 projects[shiny][subdir] = "contrib"
-
-; basic
-projects[basic][type] = "theme"
-projects[basic][version] = ""; TODO add version
-projects[basic][subdir] = "contrib"
-
