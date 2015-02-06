@@ -8,6 +8,6 @@ includes[] = "drupal-org.make"
 
 ; +++++ TODO modules without versions +++++
 
-projects[veldeke_dictionary][version] = "" ; TODO add version
-projects[veldeke_dictionary][subdir] = "custom"
+;projects[veldeke_dictionary][version] = "" ; TODO add version
+;projects[veldeke_dictionary][subdir] = "custom"
 
