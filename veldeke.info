@@ -53,5 +53,5 @@ dependencies[] = wysiwyg_linebreaks
 dependencies[] = webform
 ; Features
 dependencies[] = features
-;dependencies[] = veldeke_dictionary
+dependencies[] = veldeke_dictionary
 
