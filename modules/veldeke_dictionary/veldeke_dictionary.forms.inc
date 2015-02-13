@@ -22,7 +22,7 @@ function download_csv($form, &$form_state) {
  * Submits the download csv form.
  */
 function download_csv_submit(&$form, &$form_state) {
-  $result = download_external_file('https://docs.google.com/spreadsheet/pub?key=0AgLDdff6gGPwdHVzM2pmQkZjSXVDUUwybkpQWGROVkE&single=true&gid=0&output=csv', 'public://veldeke-dictionary.csv');
+  $result = download_external_file(URL_GOOGLE_CSV, 'public://veldeke-dictionary.csv');
 }
 
 /**
@@ -89,4 +89,21 @@ function search_terms_validate($form, &$form_state) {
   else {
     form_error($form['node'], t('Sorry, no node starting with %title can be found', array('%title' => $entry)));
   }
+}
+
+/**
+ * Constructs veldeke_dictionary settings form.
+ */
+function dictionary_settings() {
+  $form = array();
+
+  $form['url_google_csv'] = array(
+    '#type' => 'textfield',
+    '#title' => t('URL google doc'),
+    '#size' => 128,
+    '#default_value' => variable_get('url_google_csv', URL_GOOGLE_CSV),
+    '#description' => t('Comma separated values file that holds the dictionary.'),
+  );
+
+  return system_settings_form($form);
 }

@@ -34,7 +34,16 @@ class VeldekeDictionaryMigration extends DynamicMigration {
       $realpath = $wrapper->realpath();
     }
 
-    $this->path = $realpath . '/veldeke-dictionary.csv';
+    $uri = 'public://veldeke-dictionary.csv';
+    if (file_exists($uri)) {
+      $this->path = $realpath . '/veldeke-dictionary.csv';
+    }
+    else {
+      dd('doesnt exist');
+      $result = download_external_file(variable_get('url_google_csv', URL_GOOGLE_CSV), 'public://veldeke-dictionary.csv');
+      dd($result);
+      $this->path = $realpath . '/veldeke-dictionary.csv';
+    }
 
 
     $this->source = new MigrateSourceCSV($this->path, $this->csvcolumns(), array());

@@ -10,6 +10,8 @@ require_once 'veldeke_dictionary.forms.inc';
 require_once 'veldeke_dictionary.theme.inc';
 require_once 'veldeke_dictionary.blocks.inc';
 
+define('URL_GOOGLE_CSV', 'https://docs.google.com/spreadsheet/pub?key=0AgLDdff6gGPwdHVzM2pmQkZjSXVDUUwybkpQWGROVkE&single=true&gid=0&output=csv');
+
 /**
  * Implements hook_migrate_api().
  */
@@ -64,8 +66,8 @@ function veldeke_dictionary_menu() {
   );
 
   $menu['admin/config/system/veldeke'] = array(
-    'title' => 'veldeke',
-    'description' => 'Configuration for veldeke',
+    'title' => 'Veldeke configuration',
+    'description' => 'Configuration for Veldeke',
     'page callback' => 'system_admin_menu_block_page',
     'access arguments' => array('administer site configuration'),
     'file' => 'system.admin.inc',
@@ -73,11 +75,20 @@ function veldeke_dictionary_menu() {
     'weight' => '0',
   );
 
-  $menu['admin/config/system/veldeke/settings'] = array(
-    'title' => 'veldeke settings',
-    'description' => 'Settings for veldeke',
+  $menu['admin/config/system/veldeke/download_csv'] = array(
+    'title' => 'Download CSV',
+    'description' => 'Download the Veldeke dictionary CSV',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('download_csv'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'veldeke_dictionary.forms.inc',
+  );
+
+  $menu['admin/config/system/veldeke/dictionary_settings'] = array(
+    'title' => 'Veldeke dictionary settings',
+    'description' => 'Settings for Veldeke dictionary',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('dictionary_settings'),
     'access arguments' => array('administer site configuration'),
     'file' => 'veldeke_dictionary.forms.inc',
   );
