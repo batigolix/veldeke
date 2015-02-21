@@ -13,5 +13,5 @@ includes[] = "drupal-org.make"
 ; Download the install profile and recursively build all its dependencies
 projects[veldeke][type] = "profile"
 projects[veldeke][download][type] = "git"
-projects[veldeke][download][url] = "git@github.com:batigolix/veldeke.git"
+projects[veldeke][download][url] = "https://github.com/batigolix/veldeke.git"
 projects[veldeke][download][branch] = "master"
