@@ -47,11 +47,9 @@ user.anonymous.json
 
 # Ignore configuration files that may contain sensitive information #
 #####################################################################
-docroot/.htaccess
 docroot/.htpasswd
 docroot/sites/*/*settings*.php
 docroot/sites/*/settings.php
-#sites/default/settings.php
 docroot/sites/default/tmp
 docroot/landing/download
 
