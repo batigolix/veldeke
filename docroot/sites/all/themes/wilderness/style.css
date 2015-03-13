@@ -391,7 +391,7 @@ div.Header
 	clip: rect(auto, auto, auto, 404px);
 }
 
-.region-navigation .menu a .t 
+.region-navigation .menu a .t
 {
 	font-size: 13px;
 	color: #162414;
@@ -675,7 +675,7 @@ div.Header
 }
 
 .BlockHeader .r
-{ 
+{
 	width:890px;
 	right:0;
 	clip: rect(auto, auto, auto, 884px);
@@ -883,9 +883,9 @@ li ol, li ul
 	padding:0;
 }
 
-li 
+li
 {
-	margin:0.2em 0;
+	margin:0;
 	padding:0;
 }
 
@@ -900,7 +900,7 @@ ol
 	padding-left:0;
 }
 
-.Post ul li, .Post ol ul li 
+.Post ul li, .Post ol ul li
 {
 	background-repeat:no-repeat;
 }
@@ -918,7 +918,7 @@ blockquote p
 
 blockquote
 {
-	border:solid 1px #ADCDA8; 
+	border:solid 1px #ADCDA8;
 	margin:10px 10px 10px 50px;
 	padding:5px 5px 5px 41px;
 	background-color:#D3E9C3;
@@ -1128,7 +1128,7 @@ a#Button .btn.active .l, a#Button .btn.active .r, button.Button .btn.active .l, 
 	text-align: center;
 }
 
-ul li 
+ul li
 {
 	text-align: left;
 	background-image: none;
@@ -1153,7 +1153,7 @@ li.expanded, li.leaf, li.collapsed
 	padding: 0 0 0 1em;
 }
 
-#user-login-form 
+#user-login-form
 {
 	text-align: left;
 }
@@ -1172,15 +1172,15 @@ fieldset
 	width: 95%;
 }
 
-fieldset legend 
+fieldset legend
 {
 	/* Fix disappearing legend in FFox */
 	display: block;
 }
 
-.breadcrumb 
+.breadcrumb
 {
-	display: block; 
+	display: block;
 	padding-bottom: .7em;
 }
 

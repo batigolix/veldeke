@@ -12,12 +12,7 @@
     background-image: none;
     display: inline;
     list-style-type: none;
-    padding: 0.2em;
-}
-
-.page-terms .lang-nav li a,
-.page-terms .az-browser li a {
-    padding: 0.3em;
+    padding: 0.4em;
 }
 
 .page-terms .definition .misc {
@@ -52,4 +47,18 @@
 #veldeke-tools-import-dictionary-form .form-item-letters .form-item {
     display: inline;
     padding: 6px 18px 0 0;
+}
+
+.page-terms h2.title {
+    font-size: 120%;
+}
+
+.page-terms ul li {
+    margin-left: 0em;
+}
+
+.page-terms #search-terms #edit-entry {
+    font-size: 120%;
+    max-width: 75%;
+    padding: 5px;
 }

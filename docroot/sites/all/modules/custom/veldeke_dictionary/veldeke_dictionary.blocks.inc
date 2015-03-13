@@ -49,20 +49,21 @@ function veldeke_dictionary_block_view($delta = '') {
   $blocks = array();
   switch ($delta) {
     case 'search_terms':
+      $blocks['subject'] = t('Search in the dictionary');
       $blocks['content'] = drupal_get_form('search_terms');
       break;
 
     case 'lang_nav':
       $arg_letter = arg(2);
       $az_letter = isset($arg_letter) ? $arg_letter : 'a';
-      $blocks['subject'] = t('Dictionary');
+      $blocks['subject'] = t('Switch language');
       $blocks['content'] = veldeke_dictionary_lang_nav($az_letter);
       break;
 
     case 'az_browse':
       $arg_lang = arg(1);
       $az_lang = $arg_lang == 'li' ? 'li' : 'nl';
-      $blocks['subject'] = NULL;
+      $blocks['subject'] = t('Browse');
       $blocks['content'] = veldeke_dictionary_az_browse($az_lang);
       break;
 
@@ -147,7 +148,7 @@ function veldeke_dictionary_az_browse($lang = 'nl') {
   return array(
     '#theme' => 'item_list',
     '#items' => $items,
-    '#title' => t('Browse'),
+    '#title' => NULL,
     '#type' => $type,
     '#attributes' => $attributes,
   );
@@ -185,7 +186,7 @@ function veldeke_dictionary_lang_nav($letter = 'a') {
   $build = array(
     '#theme' => 'item_list',
     '#items' => $items,
-    '#title' => t('Switch language'),
+    '#title' => NULL,
     '#type' => 'ul',
     '#attributes' => array(
       'class' => 'lang-nav',

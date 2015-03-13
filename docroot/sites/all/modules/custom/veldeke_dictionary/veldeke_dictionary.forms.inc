@@ -32,7 +32,7 @@ function search_terms($form, &$form_state) {
   $form['entry'] = array(
     '#type' => 'textfield',
     '#size' => 12,
-    '#title' => t('Search in the dictionary'),
+    '#title' => NULL,
     '#autocomplete_path' => 'veldeke_dictionary/search_terms_autocomplete_callback',
   );
   $form['submit'] = array(
