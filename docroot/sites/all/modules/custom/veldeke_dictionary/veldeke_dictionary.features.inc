@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * veldeke_dictionary.features.inc
