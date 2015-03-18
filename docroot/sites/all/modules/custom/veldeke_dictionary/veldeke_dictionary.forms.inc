@@ -37,7 +37,7 @@ function search_terms($form, &$form_state) {
   );
   $form['submit'] = array(
     '#type' => 'submit',
-    '#value' => 'Search',
+    '#value' => t('Search'),
   );
   return $form;
 }
