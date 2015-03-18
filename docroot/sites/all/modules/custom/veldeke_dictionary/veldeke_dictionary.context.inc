@@ -57,15 +57,15 @@ function veldeke_dictionary_context_default_contexts() {
           'region' => 'content',
           'weight' => '-13',
         ),
-        'system-main' => array(
-          'module' => 'system',
-          'delta' => 'main',
-          'region' => 'content',
-          'weight' => '-12',
-        ),
         'veldeke_dictionary-instruct' => array(
           'module' => 'veldeke_dictionary',
           'delta' => 'instruct',
+          'region' => 'content',
+          'weight' => '-12',
+        ),
+        'system-main' => array(
+          'module' => 'system',
+          'delta' => 'main',
           'region' => 'content',
           'weight' => '-11',
         ),
