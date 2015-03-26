@@ -337,7 +337,7 @@ function veldeke_dictionary_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_head_word',
-      'label' => 'Head word',
+      'label' => 'Dutch',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -473,7 +473,7 @@ function veldeke_dictionary_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_translation',
-      'label' => 'Translation',
+      'label' => 'Venloos',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -497,9 +497,9 @@ function veldeke_dictionary_field_default_fields() {
   t('Dialect');
   t('First character head word');
   t('First character translation');
-  t('Head word');
+  t('Dutch');
   t('Remarks');
-  t('Translation');
+  t('Venloos');
 
   return $fields;
 }
