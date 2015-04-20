@@ -12,7 +12,7 @@
 function veldeke_dictionary_block_info() {
   $blocks['search_terms'] = array(
     'info' => t('Veldeke dictionary: search terms'),
-    'cache' => DRUPAL_CACHE_GLOBAL,
+    'cache' => DRUPAL_NO_CACHE,
   );
 
   $blocks['lang_nav'] = array(
