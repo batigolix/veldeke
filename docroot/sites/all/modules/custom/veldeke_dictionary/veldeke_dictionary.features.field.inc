@@ -195,7 +195,7 @@ function veldeke_dictionary_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_conjugation',
-      'label' => 'Vertaling',
+      'label' => 'Verbuiging',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
