@@ -195,7 +195,7 @@ function veldeke_dictionary_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_conjugation',
-      'label' => 'Conjugation',
+      'label' => 'Vertaling',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -337,7 +337,7 @@ function veldeke_dictionary_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_head_word',
-      'label' => 'Dutch',
+      'label' => 'Nederlands',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
