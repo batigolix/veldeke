@@ -60,7 +60,6 @@ function search_terms_validate($form, &$form_state) {
   $entry = $form_state['values']['entry'];
   $matches = array();
   $nid = 0;
-
   // Matches a pattern like [33334] and if found extracts the numeric portion.
   $result = preg_match('/\[([0-9]+)\]$/', $entry, $matches);
   if ($result > 0) {
@@ -68,7 +67,7 @@ function search_terms_validate($form, &$form_state) {
     $nid = $matches[$result];
     $node = node_load($nid);
     if (empty($node)) {
-      form_error($form['node'], t('Sorry, no node with nid %nid can be found', array('%nid' => $nid)));
+      form_set_error('entry', t('Sorry, no term with nid %nid can be found', array('%nid' => $nid)));
       return;
     }
   }
@@ -87,7 +86,7 @@ function search_terms_validate($form, &$form_state) {
     $form_state['values']['node'] = $nid;
   }
   else {
-    form_error($form['node'], t('Sorry, no node starting with %title can be found', array('%title' => $entry)));
+    form_set_error('entry', t('Sorry, no term starting with %title can be found', array('%title' => $entry)));
   }
 }
 
