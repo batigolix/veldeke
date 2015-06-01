@@ -50,7 +50,7 @@ function veldeke_dictionary_entries($lang = 'nl', $letter = 'a') {
         )));
   }
   else {
-    drupal_set_message('No dictionary entries found. Please try another letter.', 'notice');
+    drupal_set_message(t('No dictionary entries found. Please try another letter.', 'notice'));
     drupal_set_title(t('Dictionary'));
   }
 
