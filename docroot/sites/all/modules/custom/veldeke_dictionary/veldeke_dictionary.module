@@ -236,7 +236,10 @@ function search_terms_autocomplete_callback($string = "") {
 
 /**
  * Removes node listing.
+ *
+ * Blocks access to rss.xml.
  */
 function veldeke_dictionary_menu_alter(&$items) {
   unset($items['node']);
+  $items['rss.xml']['access callback'] = FALSE;
 }

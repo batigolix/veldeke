@@ -67,7 +67,6 @@
           <div class="cleared"></div>
           <div class="Footer">
             <div class="Footer-inner">
-              <a href="<?php echo $base_path; ?>rss.xml" class="rss-tag-icon" title="RSS"></a>
               <div class="Footer-text">
        <?php if (!empty($page['copyright']))print render($page['copyright']); ?>
               </div>
