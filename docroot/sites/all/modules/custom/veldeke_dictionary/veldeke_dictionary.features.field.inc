@@ -493,13 +493,13 @@ function veldeke_dictionary_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Conjugation');
   t('Dialect');
   t('First character head word');
   t('First character translation');
-  t('Dutch');
+  t('Nederlands');
   t('Remarks');
   t('Venloos');
+  t('Verbuiging');
 
   return $fields;
 }

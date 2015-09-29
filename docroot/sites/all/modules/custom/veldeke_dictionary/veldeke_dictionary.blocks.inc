@@ -90,7 +90,7 @@ function veldeke_dictionary_block_view($delta = '') {
  */
 function veldeke_dictionary_block_configure($delta = '') {
   $form = array();
-  if ($delta == 'dictionary_instruct') {
+  if ($delta == 'instruct') {
     $form['dicinstruct_text'] = array(
       '#type' => 'textarea',
       '#title' => t('Block contents'),
@@ -107,7 +107,7 @@ function veldeke_dictionary_block_configure($delta = '') {
  * Implements hook_block_save().
  */
 function veldeke_dictionary_block_save($delta = '', $edit = array()) {
-  if ($delta == 'dictionary_instruct') {
+  if ($delta == 'instruct') {
     variable_set('dicinstruct_text', $edit['dicinstruct_text']);
   }
 }
