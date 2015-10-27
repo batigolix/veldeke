@@ -39,43 +39,43 @@ function veldeke_dictionary_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-8',
         ),
-        'veldeke_dictionary-instruct' => array(
-          'module' => 'veldeke_dictionary',
-          'delta' => 'instruct',
-          'region' => 'content',
-          'weight' => '-17',
-        ),
-        'system-main' => array(
-          'module' => 'system',
-          'delta' => 'main',
-          'region' => 'content',
-          'weight' => '-16',
-        ),
         'veldeke_dictionary-lang_nav' => array(
           'module' => 'veldeke_dictionary',
           'delta' => 'lang_nav',
           'region' => 'content',
           'weight' => '-15',
         ),
+        'veldeke_dictionary-instruct' => array(
+          'module' => 'veldeke_dictionary',
+          'delta' => 'instruct',
+          'region' => 'content',
+          'weight' => '-14',
+        ),
+        'system-main' => array(
+          'module' => 'system',
+          'delta' => 'main',
+          'region' => 'content',
+          'weight' => '-13',
+        ),
         'veldeke_dictionary-az_browse' => array(
           'module' => 'veldeke_dictionary',
           'delta' => 'az_browse',
           'region' => 'content',
-          'weight' => '-14',
+          'weight' => '-12',
         ),
         'veldeke_dictionary-search_terms' => array(
           'module' => 'veldeke_dictionary',
           'delta' => 'search_terms',
           'region' => 'content',
-          'weight' => '-13',
+          'weight' => '-11',
         ),
       ),
     ),
   );
   $context->condition_mode = 0;
 
-  // Translatables
-  // Included for use with string extractors like potx.
+// Translatables
+// Included for use with string extractors like potx.
   t('Dictionary');
   $export['dictionary'] = $context;
 
