@@ -5,17 +5,17 @@
  * Migrate definitions for the Veldeke dictionary.
  */
 
-
 /**
  * Defines a dynamic migration that is reused for each source CSV file.
  */
-class VeldekeDictionaryMigration extends DynamicMigration {
+class VeldekeDictionaryMigration extends Migration {
 
   /**
    * Constructs the migration.
    */
-  public function __construct() {
-    parent::__construct();
+  public function __construct($arguments) {
+    parent::__construct($arguments);
+    $options = array('track_changes' => 1);
     $this->description = t('Import dictionary from CSV file.');
 
     // Creates a map object for tracking the relationships between source rows.
@@ -43,7 +43,7 @@ class VeldekeDictionaryMigration extends DynamicMigration {
       $this->path = $realpath . '/veldeke-dictionary.csv';
     }
 
-    $this->source = new MigrateSourceCSV($this->path, $this->csvcolumns(), array());
+    $this->source = new MigrateSourceCSV($this->path, $this->csvcolumns(), $options);
 
     // Creates a destination object that receives the data.
     $this->destination = new MigrateDestinationNode('dictionary_entry');

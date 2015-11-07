@@ -18,9 +18,15 @@ define('URL_GOOGLE_CSV', 'https://docs.google.com/spreadsheet/pub?key=0AgLDdff6g
 function veldeke_dictionary_migrate_api() {
   $api = array(
     'api' => 2,
+    'groups' => array(
+      'veldeke_dictionary_migrations' => array(
+        'title' => t('Veldeke woordenboek'),
+      ),
+    ),
     'migrations' => array(
-      'VeldekeDictionary' => array(
+      'ImporteerCSV' => array(
         'class_name' => 'VeldekeDictionaryMigration',
+        'group_name' => 'veldeke_dictionary_migrations',
       ),
     ),
   );
