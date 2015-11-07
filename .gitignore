@@ -5,7 +5,7 @@ docroot/sites/*/settings*.php
 docroot/sites/*/files
 docroot/sites/*/private
 docroot/sites/default
-docroot/sites/veldeke-krink-venlo
+docroot/sites/veldeke-krink-venlo.nl
 
 # Packages #
 ############
