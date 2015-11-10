@@ -24,4 +24,4 @@ features[node][] = dictionary_entry
 features[taxonomy][] = dialects
 files[] = veldeke_dictionary.module
 files[] = veldeke_dictionary.migrate.inc
-mtime = 1426712457
+mtime = 1443557932

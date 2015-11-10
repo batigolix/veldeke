@@ -51,9 +51,9 @@ function veldeke_dictionary_context_default_contexts() {
           'region' => 'content',
           'weight' => '-14',
         ),
-        'system-main' => array(
-          'module' => 'system',
-          'delta' => 'main',
+        'veldeke_dictionary-search_terms' => array(
+          'module' => 'veldeke_dictionary',
+          'delta' => 'search_terms',
           'region' => 'content',
           'weight' => '-13',
         ),
@@ -63,9 +63,9 @@ function veldeke_dictionary_context_default_contexts() {
           'region' => 'content',
           'weight' => '-12',
         ),
-        'veldeke_dictionary-search_terms' => array(
-          'module' => 'veldeke_dictionary',
-          'delta' => 'search_terms',
+        'system-main' => array(
+          'module' => 'system',
+          'delta' => 'main',
           'region' => 'content',
           'weight' => '-11',
         ),
@@ -74,8 +74,8 @@ function veldeke_dictionary_context_default_contexts() {
   );
   $context->condition_mode = 0;
 
-// Translatables
-// Included for use with string extractors like potx.
+  // Translatables
+  // Included for use with string extractors like potx.
   t('Dictionary');
   $export['dictionary'] = $context;
 
