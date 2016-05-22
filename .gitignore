@@ -115,6 +115,7 @@ nbproject
 www/sites/default/tmp/.htaccess
 *.sublime-project
 *.sublime-workspace
+.idea
 
 # development modules #
 #######################
