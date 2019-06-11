@@ -18,7 +18,7 @@ Drupal.wysiwyg.plugins.linebreaks = {
 
   // Clean up content for saving or turning off WYSIWYG.
   linebreaks_detach : function(content) {
-    var blocklist1, blocklist2;
+    var blocklist1, blocklist2, blocklist3;
 
     // Protect pre|script tags.
     content = content.replace(/<(pre|script)[^>]*>[\s\S]+?<\/\1>/g, function(a) {
@@ -91,6 +91,7 @@ Drupal.wysiwyg.plugins.linebreaks = {
   linebreaks_attach : function(content) {
 
     var blocklist = 'table|thead|tfoot|caption|col|colgroup|tbody|tr|td|th|div|dl|dd|dt|ul|ol|li|hr|pre|select|form|blockquote|address|math|p|h[1-6]';
+    var allowedlist = 'strong|em|span|u|a';
 
     if (content == "") {
       return content;
@@ -126,7 +127,8 @@ Drupal.wysiwyg.plugins.linebreaks = {
     content = content.replace(new RegExp('</blockquote>\\s*</p>', 'gi'), '</p></blockquote>');
     content = content.replace(new RegExp('<p>\\s*(</?(?:'+blocklist+')[^>]*>)', 'gi'), "$1");
     content = content.replace(new RegExp('(</?(?:'+blocklist+')[^>]*>)\\s*</p>', 'gi'), "$1");
-    content = content.replace(new RegExp('\\s*\\n', 'gi'), "<br />\n");
+    content = content.replace(new RegExp('([^>])\\s*\\n', 'gi'), "$1<br />\n");
+    content = content.replace(new RegExp('<\\/('+allowedlist+')>\\s*\\n', 'gi'), "</$1><br />\n");
     content = content.replace(new RegExp('(</?(?:'+blocklist+')[^>]*>)\\s*<br />', 'gi'), "$1");
     content = content.replace(new RegExp('<br />(\\s*</?(?:p|li|div|dl|dd|dt|th|pre|td|ul|ol)>)', 'gi'), '$1');
     content = content.replace(new RegExp('(?:<p>|<br ?/?>)*\\s*\\[caption([^\\[]+)\\[/caption\\]\\s*(?:</p>|<br ?/?>)*', 'gi'), '[caption$1[/caption]');
