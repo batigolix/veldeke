@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+# resets the local dev environment
+
+PROJ_DIR="$HOME/Sites/veldeke"
+COMPOSER="fin composer"
+DRUSH="fin drush @dxdev"
+
+#echo "Move to working directory"
+#cd "$PROJ_DIR"
+#echo "Easing files and folder permissions"
+#chmod 755 $PROJ_DIR
+#find $PROJ_DIR/web -type d -print0 | xargs -0 chmod 755
+#find $PROJ_DIR/web -type f -print0 | xargs -0 chmod 644
+#chmod a+w $PROJ_DIR/web/sites/default
+#chmod a+w $PROJ_DIR/web/sites/default/settings.php
+#chmod 777 -R $PROJ_DIR/web/sites/default/files
+
+$COMPOSER install
+
+#$DRUSH vset file_temporary_path "sites/default/files/temp"
+
+echo "Preparing Drupal using drush"
+$DRUSH updb -y;
+$DRUSH cc all;
+$DRUSH fra -y;
+$DRUSH cc all;
+
+#$DRUSH en module_filter --y
+#$DRUSH en bean_admin_ui --y
+$DRUSH en context_ui --y
+$DRUSH en feeds_ui --y
+#$DRUSH en felix_ui --y
+$DRUSH en field_ui --y
+#$DRUSH en og_ui --y
+#$DRUSH en path_breadcrumbs_ui --y
+#$DRUSH en print_ui --y
+#$DRUSH en rules_admin --y
+$DRUSH en views_ui --y
+#$DRUSH en stage_file_proxy --y
+$DRUSH en update --y
+$DRUSH en devel --y
+#$DRUSH en hacked --y
+#$DRUSH en security_review --y
+#$DRUSH en adb --y
+#$DRUSH en security_review --y
+#$DRUSH en permission_report --y
+$DRUSH en dblog --y
+
+# Enable test module
+#$DRUSH en vwn_test --y
+
+## Finetune content
+#$DRUSH php-eval "node_delete(269228);"
+
+#echo "Restrict folder & file permissions"
+#chmod a-w $PROJ_DIR/web/sites/default
+#chmod a-w $PROJ_DIR/web/sites/default/settings.php
+
+# set dev environment permissions
+chmod 777 -R $PROJ_DIR/docroot/sites/default/files
