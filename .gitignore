@@ -120,3 +120,5 @@ www/sites/default/tmp/.htaccess
 # development modules #
 #######################
 docroot/sites/all/modules/development
+
+db
