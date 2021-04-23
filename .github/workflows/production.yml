@@ -23,3 +23,4 @@ jobs:
             git pull origin master
             chmod a-w docroot/sites/${{ secrets.SITE_DIR }}
             chmod a-w docroot/sites/${{ secrets.SITE_DIR }}/settings.php
+            drush st --root=${{ secrets.PRODUCTION_DIR }}/docroot
