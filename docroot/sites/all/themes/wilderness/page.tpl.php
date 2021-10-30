@@ -1,8 +1,3 @@
-<?php
-//dsm('TESTAAAA');
-//dpm(get_defined_vars());
-?>
-
     <div class="PageBackgroundGlare">
       <div class="PageBackgroundGlareImage"></div>
     </div>

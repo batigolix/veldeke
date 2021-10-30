@@ -20,7 +20,7 @@ function wilderness_menu_local_task($variables) {
   if (!empty($variables['element']['#active'])) {
     // Add text to indicate active tab for non-visual users.
     $active = '<span class="element-invisible">' . t('(active tab)') . '</span>';
-    
+
     // If the link does not contain HTML already, check_plain() it now.
     // After we set 'html'=TRUE the link will not be sanitized by l().
     if (empty($link['localized_options']['html'])) {
@@ -29,12 +29,12 @@ function wilderness_menu_local_task($variables) {
     $link['localized_options']['html'] = TRUE;
     $link_text = t('!local-task-title!active', array('!local-task-title' => $link['title'], '!active' => $active));
   }
-  
+
   $link['localized_options']['html'] = TRUE;
   return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l('<span class="btn"><span class="l"></span><span class="r"></span><span class="t">' . $link_text  . '</span><span>', $link['href'],  array('attributes' => array('id' => 'Button'), 'html'=>TRUE)) . "</li>\n";
 
 
- 
+
 }
 
 function wilderness_menu_link(array $variables) {
@@ -138,7 +138,7 @@ function wilderness_img_assist_page($content, $attributes = NULL) {
   // However, on my site I turned off the text link since I use TinyMCE. I think
   // it would confuse users to have an Add Images link AND a button on the
   // TinyMCE toolbar.
-  // 
+  //
   // Note that in both cases the img_assist.css file is loaded last. This
   // provides a way to make style changes to img_assist independently of how it
   // was loaded.
@@ -180,6 +180,7 @@ function wilderness_img_assist_page($content, $attributes = NULL) {
 }
 function wilderness_preprocess_page(&$variables) {
   $variables['theme_path'] = drupal_get_path('theme','wilderness');
+  $variables['site_slogan'] = filter_xss_admin(variable_get('site_slogan', ''));
 }
 
 
