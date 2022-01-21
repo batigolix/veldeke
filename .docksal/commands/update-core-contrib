@@ -24,3 +24,5 @@ $DRUSH up -y;
 git add docroot/*
 git commit -m "updating core & contrib packages"
 git push origin master
+
+$DRUSH @live uli
