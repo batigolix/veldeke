@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# resets the local dev environment
+
+PROJ_DIR="$HOME/Sites/veldeke"
+DRUSH="fin drush @dev"
+
+#echo "Move to working directory"
+#cd "$PROJ_DIR"
+#echo "Easing files and folder permissions"
+#chmod 755 $PROJ_DIR
+#find $PROJ_DIR/web -type d -print0 | xargs -0 chmod 755
+#find $PROJ_DIR/web -type f -print0 | xargs -0 chmod 644
+#chmod a+w $PROJ_DIR/web/sites/default
+#chmod a+w $PROJ_DIR/web/sites/default/settings.php
+#chmod 777 -R $PROJ_DIR/web/sites/default/files
+
+git stash
+git checkout master
+git pull origin master
+
+$DRUSH up -y;
+
+git add docroot/*
+git commit -m "updating core & contrib packages"
+git push origin master
