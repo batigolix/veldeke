@@ -19,7 +19,8 @@ git stash
 git checkout master
 git pull origin master
 
-$DRUSH up -y;
+cd docroot
+fin drush up -y --root=docroot;
 
 git add docroot/*
 git commit -m "updating core & contrib packages"
