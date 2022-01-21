@@ -3,7 +3,7 @@
 // Define the testing environment.
 $aliases['dev'] = array(
   'root' => '/var/www/html/docroot',
-  'uri' => 'http://veldeke.test',
+  'uri' => 'http://veldeke.docksal',
   'remote-host' => 'localhost',
   'remote-user' => 'root',
 );
