@@ -10,8 +10,10 @@ git stash
 git checkout master
 git pull origin master
 
-fin drush up -y --root=docroot;
+fin drush sqlq "truncate table cache_update" --root=docroot
+fin drush cc drush --root=docroot
+fin drush up -y --root=docroot
 
 git add docroot/*
 git commit -m "updating core & contrib packages"
-#git push origin master
+git push origin master
